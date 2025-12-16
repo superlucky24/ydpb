@@ -1,0 +1,119 @@
+@charset "utf-8";
+#board {
+    line-height: 25px;
+}
+div, fieldset, legend {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: inherit;
+    font-family: inherit;
+    box-sizing: border-box;
+    word-break: initial;
+}
+.clearfix {
+    display: block;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+fieldset {
+    border: none;
+    min-width: 0;
+}
+legend {
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background: 0 0;
+    font-size: 0;
+    color: transparent;
+    line-height: 0;
+}
+.p-search {
+    margin-bottom: 30px;
+    background: #f0f1f3;
+    border-color: #f0f1f3;
+    position: relative;
+    padding: 12px;
+    border: 1px solid #d1d1d1;
+    border-radius: 0;
+    box-sizing: border-box;
+}
+.p-search .p-form-group {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    white-space: nowrap;
+    display: table;
+}
+.skip {
+    background: 0 0;
+    font-size: 0 !important;
+    color: transparent !important;
+    line-height: 0;
+}
+label {
+    display: inline-block;
+    cursor: pointer;
+}
+.p-search select.p-input {
+    line-height: 39px;
+}
+.p-search .p-input {
+    height: 42px;
+}
+select {
+    color: #000;
+    text-transform: none;
+    max-width: 100%;
+}
+select.p-input {
+    padding: 0 0 2px 12px;
+    -webkit-padding-end: 30px;
+    font-family: inherit;
+    background: #fff url(../images/Board/board01.png) no-repeat right 8px center;
+    appearance: none;
+    cursor: pointer;
+    min-width: 75px;
+    border-radius: 0;
+    
+}
+input:not([readonly]):focus {
+    border-color: #888;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+.p-input:hover {
+    border-color: #177ac8;
+}
+#search_krwd {
+    display: inline-block;
+    width: 100%;
+    margin: 2px 0;
+    border: 1px solid #cdcdcd;
+    border-radius: 5px;
+    vertical-align: middle;
+    box-sizing: border-box;
+
+}
+.p-form {
+    display: table-cell;
+    width: 1%;
+    padding: 0 6px;
+    vertical-align: middle;
+}
+span {
+    margin: 0;
+    box-sizing: border-box;
+}
+.p-fomr:before {
+    display: inline-block;
+    width: 0;
+}
+:before {
+    content: '';
+}
