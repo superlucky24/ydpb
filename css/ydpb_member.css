@@ -445,41 +445,6 @@
 .join_form .table_form .col1 {
     width: 150px;
 }
-.table_form {
-    width: 100%;
-    margin-bottom: 8px;
-    border-top: 2px solid #222222;
-    border-collapse: collapse;
-}
-.table_form th {
-    padding: 13px 11px;
-    font-weight: 400;
-    vertical-align: middle;
-    border: 1px solid #d9d9d9;
-    background: #f6f6f6;
-}
-.table_form td {
-    padding: 11px;
-    border: 1px solid #d9d9d9;
-}
-.table_form .required_mark {
-    display: inline-block;
-    width: 14px;
-    height: 8px;
-    margin-top: -3px;
-    font-size: 0;
-    text-indent: -100%;
-    vertical-align: middle;
-    background: url(../images/member/asterisk.png) no-repeat center;
-}
-.table_form .input_auto {
-    width: auto;
-}
-.table_form .text_alert {
-    display: inline-block;
-    padding-left: 24px;
-    background: url(../images/member/exclamation.png) no-repeat left 2px;
-}
 .join_form .btns {
     text-align: center;
 }
