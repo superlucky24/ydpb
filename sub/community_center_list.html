@@ -52,23 +52,23 @@
                                     <div class="p-search clearfix">
                                         <div class="p-form-group">
                                             <label for="search_cnb" class="skip">검색항목선택</label>
-                                            <select name="search_cnb" id="search_cnb" class="p-input">
+                                            <select name="search_cnb" id="search_cnb" title="검색항목선택" class="p-input">
                                                 <option value="title" selected="selected">제목</option>
                                                 <option value="con">내용</option>
                                                 <option value="city">행정동</option>
                                             </select>
-                                            <span class="p-form"></span>
+                                            
                                             <label for="search_krwd" class="skip"></label>
                                             <input name="searchKrwd" id="search_krwd" class="p-input" type="text" value>
+                                            <span class="p-form-group__btn">
+                                                <input value="검색" type="submit" class="p-button">
+                                            </span>
                                         </div>
-                                        <span class="p-form-group__btn">
-                                            <input value="검색" type="submit" class="p-button">
-                                        </span>
                                     </div>
                                 </fieldset>
                             </form>
                         </div>
-                        <div class="page_cou">
+                        <div class="page_cou clearfix">
                             <p>
                                 총
                                 <em class="em_black">15</em>
@@ -102,11 +102,24 @@
                                     <td><time datetime="2025-07-09">2025.07.09</time></td>
                                     <td>84</td>
                                 </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td class="p_sub"><a href="#">2024년 상반기 영등포본동 자치회관 운영결과 보고서</a></td>
+                                    <td>영등포본동</td>
+                                    <td><time datetime="2025-07-09">2024.07.09</time></td>
+                                    <td>74</td>
+                                </tr>
                             </tbody>
                         </table>
-                        <div class="p_control">
-                            <span class="p_link"><a href="#">1</a></span>
-                            <span class="p_link02"><a href="#">2</a></span>
+                        <div class="p_ctrl">
+                            <div class="p_control">
+                                <span class="p-link_b">
+                                    <strong title="현재 1페이지" class="p_link active">
+                                        1
+                                    </strong>
+                                    <a href="#" class="p_link">2</a>
+                                </span>
+                            </div>
                         </div>
                     </div>
                     <!-- //contents -->
