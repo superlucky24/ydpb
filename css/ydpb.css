@@ -8,10 +8,13 @@ body {
     color: #4c4c4c;
     font-family: 'Spoqa Han Sans', 'Malgun Gothic', '맑은 고딕', Dotum, '돋움', Helvetica, AppleSDGothicNeo, sans-serif;
     letter-spacing: -0.03em;
+    -webkit-text-size-adjust: 100%;
 }
+
 /* header */
 .header {
 }
+
 /* 버튼 공통  */
 button{
     cursor: pointer;
@@ -687,7 +690,7 @@ h1{
     background: url(../images/common/location_bg.png) no-repeat center top;
 }
 .safe_area {
-    max-width: 1400px;
+    width: 1400px;
     margin: 0 auto;
 }
 .contents_wrap {
@@ -758,6 +761,8 @@ main {
     height: 40px;
     margin: 2px 0;
     padding: 7px 30px;
+    font-family: inherit;
+    font-size: inherit;
     font-weight: 400;
     text-align: center;
     line-height: inherit;
@@ -780,7 +785,7 @@ main {
     border-color: #474e7c;
     background-color: #59629d;
 }
-.btn-primary:hover {
+.btn_primary:hover {
     border-color: #474e7c;
     background-color: #4a5283;
 }
@@ -797,7 +802,7 @@ main {
     border-color: #d6d6d6;
     background-color: #efefef;
 }
-.btn-cancel:hover {
+.btn_cancel:hover {
     color: #666;
     border-color: #d6d6d6;
     background-color: #dbdbdb;
@@ -805,7 +810,14 @@ main {
 .btn_sm {
     height: 30px;
     padding: 0 12px 2px;
-    font-size: 0.95em
+    font-size: 0.95em;
+    line-height: 28px;
+}
+a.btn {
+    padding: 11px 30px 0;
+}
+a.btn_sm {
+    padding: 0 12px;
 }
 
 /* input */
@@ -814,7 +826,9 @@ main {
     width: 100%;
     height: 30px;
     margin: 2px 0;
-    padding: 0 12px 2px;
+    padding: 1px 12px;
+    font-size: inherit;
+    font-family: inherit;
     line-height: inherit;
     vertical-align: middle;
     border: 1px solid #cdcdcd;
@@ -836,11 +850,22 @@ main {
     border-color: #d7d7d7;
     background: #f0f0f0;
 }
+.input[readonly]:focus {
+    outline: 1px solid red;
+}
 .input[disabled],
 .input.disabled {
     border-color: #d7d7d7;
     background: #f0f0f0;
     cursor: not-allowed;
+}
+.input.form_input {
+    border-color: #dfdfdf;
+    border-radius: 5px;
+}
+textarea.input {
+    height: 130px;
+    padding: 12px;
 }
 
 /* checkbox, radio */
@@ -912,4 +937,60 @@ main {
 }
 .radio + .radio {
     margin-left: 8px;
+}
+
+/* table */
+.table_form {
+    width: 100%;
+    margin-bottom: 8px;
+    border-collapse: collapse;
+}
+.table_form th {
+    padding: 13px 11px;
+    font-weight: 400;
+    vertical-align: middle;
+    border: 1px solid #d9d9d9;
+    background: #f6f6f6;
+}
+.table_form td {
+    padding: 11px;
+    border: 1px solid #d9d9d9;
+}
+.table_form tr:first-child > th,
+.table_form tr:first-child > td {
+    border-top: 2px solid #222222;
+}
+.table_form .input_auto {
+    width: auto;
+}
+.text_alert {
+    display: inline-block;
+    padding-left: 24px;
+    background: url(../images/member/exclamation.png) no-repeat left 2px;
+}
+.required_mark {
+    display: inline-block;
+    width: 14px;
+    height: 8px;
+    margin-top: -3px;
+    font-size: 0;
+    text-indent: -100%;
+    vertical-align: middle;
+    background: url(../images/member/asterisk.png) no-repeat center;
+}
+
+/* 레이어 경고창 */
+.layer_alert {
+    position: fixed;
+    left: 50%;
+    top: 2%;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 1.4rem;
+    line-height: 1.3;
+    text-align: center;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.7);
+    transform: translateX(-50%);
+    z-index: 9999;
 }
