@@ -180,6 +180,7 @@ span {
 em {
     font-style: normal;
     color: #000;
+    box-sizing: border-box;
 }
 .em_b_black {
     font-weight: bold;
@@ -224,17 +225,45 @@ em {
 .p_control {
     text-align: center;
 }
-.p_control .p_link {
+.p_control .p-link_b {
+    display: inline-flex;
+    margin: 0;
+    border-left: 1px solid #dedede;
+}
+.p_link {
+    display: inline-flex;
+    text-align: center;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    font-size: 0.9em;
+    line-height: 40px;
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+    border-right: 1px solid #dedede;
+    background: #fff;
+    vertical-align: top;
+}
+.p_control strong {
+    display: inline-block;
     border-color: #202e70;
     background: #202e70;
     color: #fff;
     font-weight: 400;
-    display: table-cell;
-    width: 40px;
-    height: 40px;
-    margin-left: 0;
-    margin-right: 0;
-    font-size: 0.9em;
-    line-height: 40px;
-    
+}
+.p-link_b strong.p_link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 8px;
+    transform: translateX(-5px);
+    width: 12px;
+    height: 1px;
+    background: rgba(255,255,255,0.8);
+}
+.p-link_b a.p_link {
+    display: inline-block;    
+    color: #4c4c4c;
+    text-decoration: none;
 }
