@@ -8,11 +8,12 @@
     <link rel="shortcut icon" href="../images/favicon.ico">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/ydpb.css">
-    <link rel="stylesheet" href="../css/community_center_list.css">
+    <link rel="stylesheet" href="../css/ydpb_community_center_write.css">
     <script src="../js/jquery-1.12.4.min.js"></script>
     <script src="../js/jquery-3.3.1.min.js"></script>
     <script src="../js/prefixfree.min.js"></script>
     <script src="../js/ydpb.js"></script>
+    <script src="../js/ydpb_community_center_write.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -44,78 +45,104 @@
                     <!-- location -->
 
                     <!-- contents -->
-                    <div id="board" class="clearfix">
-                        <div id="contents">
-                            <form action="#" class="board_searchform">
-                                <fieldset>
-                                    <legend>게시물검색</legend>
-                                    <div class="p-search clearfix">
-                                        <div class="p-form-group">
-                                            <label for="search_cnb" class="skip">검색항목선택</label>
-                                            <select name="search_cnb" id="search_cnb" title="검색항목선택" class="p-input">
-                                                <option value="title" selected="selected">제목</option>
-                                                <option value="con">내용</option>
-                                                <option value="city">행정동</option>
-                                            </select>
-                                            
-                                            <label for="search_krwd" class="skip"></label>
-                                            <input name="searchKrwd" id="search_krwd" class="p-input" type="text" value>
-                                            <span class="p-form-group__btn">
-                                                <input value="검색" type="submit" class="p-button">
-                                            </span>
-                                        </div>
-                                    </div>
-                                </fieldset>
+                    <div class="contents">
+                        <div class="board_write">
+                            <p class="text_alert alert_write"><span class="required_mark">필수항목</span> 표시는 필수 항목 입니다.</p>
+                            <form action="#" method="post">
+                                <table class="table_form">
+                                    <caption class="blind">자치회관 게시판 글쓰기</caption>
+                                    <colgroup>
+                                        <col class="col1">
+                                        <col class="col2">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">
+                                                <label for="subject">제목</label>
+                                                <span class="required_mark">필수항목</span>
+                                            </th>
+                                            <td>
+                                                <input type="text" name="subject" id="subject" class="input form_input">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                <label for="content">내용</label>
+                                                <span class="required_mark">필수항목</span>
+                                            </th>
+                                            <td>
+                                                <textarea name="content" id="content" class="input" rows="10"></textarea>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                <label for="tel">연락처</label>
+                                                <span class="required_mark">필수항목</span>
+                                            </th>
+                                            <td>
+                                                <input type="text" name="tel" id="tel" class="input form_input input_tel">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">파일</label></th>
+                                            <td>
+                                                <div class="file_group">
+                                                    <div class="file_input">
+                                                        <input type="file" name="file_1" id="file_1" multiple>
+                                                        <span class="input disabled"></span>
+                                                        <button type="button" class="clear_file" title="1번 파일 삭제">1번 파일 삭제</button>
+                                                    </div>
+                                                    <div class="file_btn">
+                                                        <label for="file_1" class="btn btn_primary btn_sm">파일선택</label>
+                                                    </div>
+                                                    <div class="file_option">
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" name="file_opt_1" id="file_opt_1">
+                                                            <label for="file_opt_1">본문삽입</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <input type="text" name="file_text_1" id="file_text_1" class="input form_input" placeholder="첨부 이미지 대체 텍스트 입력">
+                                                <div class="file_group">
+                                                    <div class="file_input">
+                                                        <input type="file" name="file_2" id="file_2" multiple>
+                                                        <span class="input disabled"></span>
+                                                        <button type="button" class="clear_file" title="2번 파일 삭제">2번 파일 삭제</button>
+                                                    </div>
+                                                    <div class="file_btn">
+                                                        <label for="file_2" class="btn btn_primary btn_sm">파일선택</label>
+                                                    </div>
+                                                    <div class="file_option">
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" name="file_opt_2" id="file_opt_2">
+                                                            <label for="file_opt_2">본문삽입</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <input type="text" name="file_text_2" id="file_text_2" class="input form_input" placeholder="첨부 이미지 대체 텍스트 입력">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">공개여부</span></th>
+                                            <td>
+                                                <div class="radio">
+                                                    <input type="radio" name="public" id="public_Y" checked>
+                                                    <label for="public_Y">공개</label>
+                                                </div>
+                                                <div class="radio">
+                                                    <input type="radio" name="public" id="public_N">
+                                                    <label for="public_N">비공개</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="btns">
+                                    <a href="community_center_list.html" class="btn btn_default">목록</a>
+                                    <input type="submit" class="btn btn_write" value="저장">
+                                    <input type="reset" class="btn btn_cancel" value="다시쓰기">
+                                </div>
                             </form>
-                        </div>
-                        <div class="page_cou clearfix">
-                            <p>
-                                총
-                                <em class="em_black">15</em>
-                                개 &nbsp;[
-                                <em class="em_b_black">1</em>
-                                / 2 페이지]
-                            </p>
-                        </div>
-                        <table class="p_table">
-                            <colgroup>
-                                <col style="width: 100px;">
-                                <col>
-                                <col style="width: 120px;">
-                                <col style="width: 120px;">
-                                <col style="width: 90px;">
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th scope="col">번호</th>
-                                    <th scope="col">제목</th>
-                                    <th scope="col">부서</th>
-                                    <th scope="col">작성일</th>
-                                    <th scope="col">조회수</th>
-                                </tr>
-                            </thead>
-                            <tbody class="tb_text">
-                                <tr>
-                                    <td>15</td>
-                                    <td class="p_sub"><a href="#">2025년 상반기 영등포본동 자치회관 운영결과 보고서</a></td>
-                                    <td>영등포본동</td>
-                                    <td><time datetime="2025-07-09">2025.07.09</time></td>
-                                    <td>84</td>
-                                </tr>
-                                <tr>
-                                    <td>14</td>
-                                    <td class="p_sub"><a href="#">2024년 상반기 영등포본동 자치회관 운영결과 보고서</a></td>
-                                    <td>영등포본동</td>
-                                    <td><time datetime="2025-07-09">2024.07.09</time></td>
-                                    <td>74</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="p_ctrl">
-                            <div class="p_control">
-                                <span class="p_link"><a href="#">1</a></span>
-                                <span class="p_link02"><a href="#">2</a></span>
-                            </div>
                         </div>
                     </div>
                     <!-- //contents -->
@@ -146,5 +173,7 @@
         </footer>
         <!-- //footer -->
     </div>
+
+    
 </body>
 </html>
