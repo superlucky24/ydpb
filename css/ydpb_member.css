@@ -36,13 +36,13 @@
     background: url(../images/member/logo.png) no-repeat;
 }
 .member_header .header_inner h1 b {
-    margin-left: 20px;
+    margin-left: 21px;
     font-size: 3.8rem;
     font-weight: 600;
     vertical-align: middle;
 }
 .member_header .header_inner p {
-    margin-top: 15px;
+    margin-top: 12px;
     font-size: 1.8rem;
 }
 
@@ -56,17 +56,19 @@
 .member_footer address {
     color: #222;
     font-style: normal;
-    line-height: 2;
+}
+.member_footer address p + p {
+    margin-top: 8px;
 }
 .member_footer address b {
     margin-right: 6px;
     font-weight: 400;
 }
 .member_footer address span + b {
-    margin-left: 14px;
+    margin-left: 17px;
 }
 .member_footer .copyright {
-    margin-top: 12px;
+    margin-top: 18px;
     color: #848484;
 }
 
@@ -91,8 +93,8 @@
     flex-flow: row nowrap;
 }
 .member_menu li {
+    flex: 1;
     position: relative;
-    width: 33.33%;
 }
 .member_menu li::before {
     content: "";
@@ -149,9 +151,6 @@
     color: #1856b5;
     font-weight: 400;
 }
-.member_container input {
-    font-family: 'Spoqa Han Sans', sans-serif;
-}
 .list_explain li {
     position: relative;
     margin-bottom: 7px;
@@ -188,7 +187,7 @@
 .login_form {
     position: relative;
     margin-top: 25px;
-    padding-right: 120px;
+    padding-right: 122px;
 }
 .login_form li {
     display: flex;
@@ -206,6 +205,7 @@
     height: 44px;
     padding: 0 10px;
     font-size: 1.6rem;
+    font-family: 'Spoqa Han Sans', sans-serif;
     line-height: 44px;
     border: 1px solid #b3b1b4;
 }
@@ -220,18 +220,19 @@
     height: 100%;
     color: #fff;
     font-size: 1.6rem;;
+    font-family: 'Spoqa Han Sans', sans-serif;
     border: 0 none;
     background: #2b4380;
+    cursor: pointer;
 }
 .member_service {
     display: flex;
     flex-flow: row nowrap;
-    margin: 20px 0 0 30px;
+    margin: 20px 0 0 40px;
 }
-.member_service li:not(:first-child) {
+.member_service li {
     position: relative;
-    margin-left: 30px;
-    padding-left: 30px;
+    padding: 0 30px;
 }
 .member_service li:not(:first-child)::before {
     content: "";
@@ -247,7 +248,7 @@
     font-weight: 600;
 }
 .login_sns {
-    margin-top: 60px;
+    margin-top: 45px;
 }
 .login_sns ul {
     margin-top: 25px;
@@ -337,7 +338,7 @@
     width: 100%;
     height: 50px;
     color: #fff;
-    line-height: 50px;
+    line-height: 48px;
     background: #2b4380;
 }
 .login_non_member .certified a:hover {
@@ -351,7 +352,7 @@
 }
 .member_re_agree > div {
     position: relative;
-    padding: 40px;
+    padding: 40px 40px 47px;
 }
 .member_re_agree::before,
 .member_re_agree::after,
