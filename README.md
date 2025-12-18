@@ -3,6 +3,10 @@ index : <a href="https://superlucky24.github.io/ydpb/" target="_blank">https://s
 <hr>
 <h3>* 2025.12.18 수정사항 *</h3>
 <p>
+  <b>파일 백업</b><br>
+  /_backup/ydpb_20251218.zip : 2025.12.18 수업 종료 시점 백업 파일
+</p>
+<p>
   <b>HTML</b><br>
   main_index.html 의 sidemenu, location -> sidemenu_layout.html 로 이동 : 사이드메뉴 및 로케이션 수정할 시 해당 파일 사용<br>
   main_index.html -> index.html 로 변경<br>
