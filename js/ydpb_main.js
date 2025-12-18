@@ -10,7 +10,8 @@ $(document).ready(function(){
     });
 
     $('.sub_group_title').on('click', function(){
-
+        $('.sub_group_title').not(this).removeClass('open');
+        $('.sub_group_list').not($(this).next('.sub_group_list')).removeClass('show');
         $(this).toggleClass('open');
         $(this).next('.sub_group_list').toggleClass('show');
     });
