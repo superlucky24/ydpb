@@ -16,7 +16,7 @@ index : <a href="https://superlucky24.github.io/ydpb/" target="_blank">https://s
 </p>
 <p>
   <b>CSS</b><br>
-  ydpb_main.css 의 sidemenu, location -> ydpb.css 로 이동
+  ydpb_main.css 의 sidemenu, location 관련 css -> ydpb_sidemenu.css 신규 생성해서 이동
 </p>
 <p>
   <b>JS</b><br>
