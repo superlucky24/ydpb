@@ -14,6 +14,8 @@ body {
 
 /* header */
 .header {
+    position: relative;
+    z-index: 100;
 }
 
 /* 누리집 */
@@ -97,43 +99,125 @@ body {
 .top_func li a{
     line-height: 34px;
 }
+.top_func li > div {
+    /* 클릭 시 아이콘 ul 위치기준값 */
+    position: relative;
+}
+/* 클릭 시 보여줄 ul 스타일 */
+.top_func li > div > ul {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: -10px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.12);
+    z-index: 200;
+}
+
 .top_func li .active_box button{
-    background: url(../images/common/gnb_down.png) right center / 8px auto no-repeat;
+    background: url(../images/common/top_func_down.png) right center / 8px auto no-repeat;
     padding-right: 15px;
     line-height: 34px;
     padding-left: 0px;
+}
+
+/* 버튼 클릭 시 스크립트와 연동 */
+.global_menu .top_func li > .active_box > button.active {
+    background-image: url(../images/common/top_func_up.png);
 }
 /* 영등포구SNS 아이콘 가림 */
 .global_menu .top_func .active_box ul{
     display: none;
 }
-.global_menu .top_func li{
+.global_menu .top_func > li{
     margin-left: 33px;
     padding-left: 25px;
     display: block;
 }
+/* 영등포구 sns 아이콘 스타일 */
+.top_func > li:nth-child(2) ul > li {
+    margin: 4px 0;
+}
+.top_func li > div > ul > li {
+    padding: 5px;
+}
+.top_func li > div > ul > li > a {
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.5);
+}
+.top_func li > div > ul > li > a > img {
+    width: 40px;
+}
+/* 말풍선 뾰족한 부분 */
+.top_func > li > .active_box > ul::after {
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 8px;
+    background: url(../images/common/top_func_box_edge.png) center no-repeat;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* 언어 스타일 */
+.top_func > li:nth-child(3) ul > li:nth-child(1) {
+    color: #000;
+    line-height: 26px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+.top_func > li:nth-child(3) ul > li:nth-child(1) > a {
+    color: #000;
+}
+.top_func li > div > ul > li > a {
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.5);
+}
+/* 중국어, 일본어 바로가기 아이콘 추가 */
+.top_func > li:nth-child(3) .active_box ul {
+    width: 150px;
+    left: -70px;
+}
+.top_func li:nth-child(3) > div > ul > li:nth-child(2) a,
+.top_func li:nth-child(3) > div > ul > li:nth-child(3) a  {
+    padding-right: 16px;
+    background-image: url(../images/common/top_func_icon_link.png);
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: center right;
+}
 /* gnb 우측 리스트 아이콘 */
-.global_menu .top_func li:nth-child(1){
+.global_menu .top_func > li:nth-child(1){
     background: url("../images/common/icon_sitemap.png");
     background-repeat: no-repeat;
     background-size: 16px auto;
     background-position: 0 center;
     vertical-align: middle;
 }
-.global_menu .top_func li:nth-child(2){
+.global_menu .top_func > li:nth-child(2){
     background: url("../images/common/icon_sns.png");
     background-repeat: no-repeat;
     background-size: 16px auto;
     background-position: 0 center;
     vertical-align: middle;
 }
-.global_menu .top_func li:nth-child(3){
+.global_menu .top_func > li:nth-child(3){
     background: url("../images/common/icon_lang.png");
     background-repeat: no-repeat;
     background-size: 16px auto;
     background-position: 0 center;
     vertical-align: middle;
 }
+
 
 /* GNB */
 .gnb{
@@ -146,7 +230,7 @@ body {
     background-color: #fff;
     position: relative;
     width: 100%;
-    z-index: 99;
+    z-index: 100;
     border-bottom: #e6e6e6 solid 1px;
 }
 .gnb > .safe_area{
@@ -207,7 +291,7 @@ h1{
     position: absolute;
     left: 50%;
     bottom: 0;
-    width: 100%;
+    width: 50%;
     transform: translateX(-50%);
     background-color: #ec6d66;
 }
@@ -499,7 +583,7 @@ h1{
     display: block;
     position: absolute;
     /* 값 수정 */
-    right: -85px;
+    right: 0px;
     bottom: -15px;
     background: url('../images/common/btn_search.png') center / 58px auto no-repeat;
     width: 58px;
@@ -560,9 +644,46 @@ h1{
     text-align: left;
     background: url(../images/common/footer_fold.png) calc(100% - 25px) center / 15px auto no-repeat;
 }
+/* 버튼 클릭 시 활성화 */
+.site_list button.active {
+    background-image: url(../images/common/footer_open.png);
+    background-color: #feeeeb;
+}
 /* 리스트 감춤 */
 .site_list ul {
     display: none;
+    position: absolute;
+    bottom: calc(100% + 4px);
+    z-index: 100;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #cdd1d5;
+    border-radius: 8px;
+    background-color: #fff;
+}
+.site_list ul > li > a {
+    display: block;
+    font-size: 15px !important;
+    color: #666 !important;
+    position: relative;
+    padding-left: 10px;
+}
+.site_list ul > li > a::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 2px;
+    background-color: #8a8a8a;
+    position: absolute;
+    left: 0;
+    top: 11px;
+}
+.site_list ul > li + li {
+    margin-top: 10px;
+}
+.site_list ul > li > a:hover {
+    text-decoration: underline;
+    color: #000000 !important;
 }
 /* Footer Bottom */
 .footer > .safe_area{
@@ -670,12 +791,16 @@ h1{
     width: 100%;
     height: 100%;
     /* 세부메뉴보단 낮게 */
-    z-index: 999;
+    z-index: 99;
     background-color: rgba(0, 0, 0, 0.5);
 }
 .top_menu ul li a:hover .black_opacity{
     /* 호버 시 뒷배경 반투명 */
     display: block;
+}
+/* 버튼 포인터 */
+button {
+    cursor: pointer;
 }
 
 /* common */
