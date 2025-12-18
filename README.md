@@ -8,7 +8,7 @@ index : <a href="https://superlucky24.github.io/ydpb/" target="_blank">https://s
 </p>
 <p>
   <b>HTML</b><br>
-  main_index.html : sidemenu -> sidemenu_layout.html 로 이동 : 사이드메뉴 수정할 시 해당 파일 사용<br>
+  main_index.html : sidemenu, location -> sidemenu_layout.html 로 이동 : 사이드메뉴 수정할 시 해당 파일 사용<br>
   main_index.html : index.html 로 파일명 변경<br>
   모든 페이지 : 공통으로 사용하는 ydpb.css, ydpb.js 파일 경로 추가<br>
   모든 페이지 : header_footer_layout.html 의 header, search, footer 내용 load() 이용해서 삽입<br>
