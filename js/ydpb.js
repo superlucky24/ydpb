@@ -11,7 +11,53 @@ $(document).ready(function() {
         e.preventDefault();
         layerAlert('죄송합니다.<br> 현재 준비중인 메뉴입니다.');
     });
+    
+    // 헤더,푸터 251218 박귀환 추가
+    // Header 
+    // .global_menu .top_func 클릭 스크립트
+    $('.top_func > li .active_box button').on('click',function () {
 
+        //active 클래스가 있으면
+        if($(this).hasClass('active')){
+            $(this).removeClass('active');
+            $(this).next().slideUp();
+        }
+        else{//active 클래스가 없으면
+            // 모든 active 클래스 제거 및 리스트 숨김
+            $('.top_func > li .active_box button').removeClass('active');
+            $('.top_func > li .active_box button').next().slideUp();
+            // 선택한 요소만 클래스 추가 후 리스트 보여줌
+            $(this).addClass('active');
+            $(this).next().slideDown();
+        }
+    })
+    // gnb 메뉴 스크립트
+    $('.top_menu > ul > li > a').on('mouseenter', function () {
+        $('.top_menu > ul > li').removeClass('active');
+        $(this).parent().addClass('active');
+        $('.black_opacity').show();
+    });
+    $('.top_menu > ul > li').on('mouseleave', function () {
+        $('.top_menu > ul > li').removeClass('active');
+        $('.black_opacity').hide();
+    });
+    
+    // Footer
+    $('.site_list .active_box button').on('click',function () {
+        //active 클래스가 있으면
+        if($(this).hasClass('active')){
+            $(this).removeClass('active');
+            $(this).next().slideUp();
+        }
+        else{//active 클래스가 없으면
+            // 모든 active 클래스 제거 및 리스트 숨김
+            $('.site_list .active_box button').removeClass('active');
+            $('.site_list .active_box button').next().slideUp();
+            // 선택한 요소만 클래스 추가 후 리스트 보여줌
+            $(this).addClass('active');
+            $(this).next().slideDown();
+        }
+    })
 });
 
 /**
@@ -35,3 +81,4 @@ function layerAlert(text) {
         }, delayTime);
     }
 }
+
