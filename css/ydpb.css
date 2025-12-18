@@ -878,7 +878,7 @@ main {
     font-size: inherit;
     font-weight: 400;
     text-align: center;
-    line-height: inherit;
+    line-height: 24px;
     vertical-align: middle;
     white-space: nowrap;
     border: 1px solid #aaa;
@@ -925,9 +925,6 @@ main {
     padding: 0 12px 2px;
     font-size: 0.95em;
     line-height: 28px;
-}
-a.btn {
-    padding: 11px 30px 0;
 }
 a.btn_sm {
     padding: 0 12px;
