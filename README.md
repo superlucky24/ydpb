@@ -8,19 +8,20 @@ index : <a href="https://superlucky24.github.io/ydpb/" target="_blank">https://s
 </p>
 <p>
   <b>HTML</b><br>
-  main_index.html 의 sidemenu, location -> sidemenu_layout.html 로 이동 : 사이드메뉴 수정할 시 해당 파일 사용<br>
-  main_index.html -> index.html 로 변경<br>
+  main_index.html : sidemenu, location -> sidemenu_layout.html 로 이동 : 사이드메뉴 수정할 시 해당 파일 사용<br>
+  main_index.html : index.html 로 파일명 변경<br>
   모든 페이지 : 공통으로 사용하는 ydpb.css, ydpb.js 파일 경로 추가<br>
   모든 페이지 : header_footer_layout.html 의 header, search, footer 내용 load() 이용해서 삽입<br>
   모든 페이지 : sidemenu_layout.html 의 sidemenu 내용 load() 이용해서 삽입
 </p>
 <p>
   <b>CSS</b><br>
-  ydpb_main.css 의 sidemenu, location 관련 css -> ydpb_sidemenu.css 신규 생성해서 이동
+  ydpb_main.css : sidemenu, location 관련 css -> ydpb_sidemenu.css 신규 생성해서 이동<br>
+  community_center_list.css : 하단 글쓰기 버튼 영역 관련 css 추가
 </p>
 <p>
   <b>JS</b><br>
-  ydpb_main.js 의 sidemenu 관련 스크립트 -> ydpb.js 로 이동
+  ydpb_main.js : sidemenu 관련 스크립트 -> ydpb.js 로 이동
 </p>
 
 <hr>
