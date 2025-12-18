@@ -50,6 +50,9 @@
     opacity: 0;
     z-index: -1;
 }
+.file_group span.input {
+    line-height: 25px;
+}
 .file_group .clear_file {
     display: none;
     position: absolute;
