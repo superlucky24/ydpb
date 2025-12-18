@@ -1,5 +1,28 @@
 $(document).ready(function() {
 
+    // header, search, footer jQuery 인클루드 : 20251218 최상림 추가
+    const pathTempHeader = '/ydpb/header_footer_layout';
+    const pathTempSide = '/ydpb/sidemenu_layout';
+    if(!RegExp(pathTempHeader).test(location.href) && !RegExp(pathTempSide).test(location.href)) {
+        $('.header').load(pathTempHeader + '.html .header > *');
+        $('.search').load(pathTempHeader + '.html .search > *');
+        $('.side_menu').load(pathTempSide + '.html .side_menu > *');
+        $('.footer').load(pathTempHeader + '.html .footer > *', function() {
+            initUi();
+        });
+    }
+    else {
+        console.log('layout 페이지');
+        initUi();
+    }
+
+});
+
+/**
+ * ui 스크립트 초기화 : 20251218 최상림 추가
+ * !!!공통영역 load 호출 이후 스크립트 추가를 위해 함수화 한 것이므로 백엔드 개발 시 수정할 수 있음을 인지할 것!!!
+ */
+function initUi() {
     // 링크 # 처리한 a 태그 클릭 이벤트 시 경고창 출력 : 20251216 최상림 추가
     $('a[href="#"]').click(function(e) {
         e.preventDefault();
@@ -57,12 +80,52 @@ $(document).ready(function() {
             $(this).addClass('active');
             $(this).next().slideDown();
         }
-    })
-});
+    });
+
+    // 사이드메뉴 클릭 이벤트 : 20251218 윤성민 추가
+    $('.side_list_menu>div').on('click', function(){        
+        $(this).parent('.side_list_menu').siblings().removeClass('open');
+        $(this).parent().siblings().find('.sub_list').removeClass('show');
+        $(this).parent().siblings().find('.sub_group').removeClass('show');
+        $(this).next('.sub_list').toggleClass('show');
+        $(this).next().find('.sub_group').toggleClass('show');
+        $(this).parent().toggleClass('open');
+    });
+
+    $('.sub_group_title').on('click', function(){
+        $('.sub_group_title').not(this).removeClass('open');
+        $('.sub_group_list').not($(this).next('.sub_group_list')).removeClass('show');
+        $(this).toggleClass('open');
+        $(this).next('.sub_group_list').toggleClass('show');
+    });
+
+    // menuName 변수가 있을 경우 해당 값에 해당하는 사이드메뉴 열기 : 20251218 최상림 추가
+    // 사이드메뉴를 jQuery load 메소드로 추가하고, 해당 페이지 메뉴 항목을 열기 위한 코드
+    if(typeof menuName != 'undefined' && menuName.trim() != '') {
+        console.log('현재 메뉴명 => ' + menuName);
+        const subList = $('.side_list .side_list_menu').eq(0).children('.sub_list');
+        const subGroupListItems = subList.find('.sub_group_list > li');
+        let thisItem;
+        for(let i = 0; i < subGroupListItems.length; i++) {
+            if(menuName == subGroupListItems.eq(i).find('a').text().trim()) {
+                thisItem = subGroupListItems.eq(i);
+                break;
+            }
+        }
+        if(thisItem.length > 0) {
+            subGroupListItems.removeClass('side_active');
+            subList.find('.sub_group_list.show').removeClass('show');
+            subList.find('.sub_group_title.open').removeClass('open');
+            thisItem.addClass('side_active');
+            thisItem.closest('.sub_group_list').addClass('show');
+            thisItem.closest('.sub_group_list').siblings('.sub_group_title').addClass('open');
+        }
+    }
+}
 
 /**
  * 레이어 경고창 생성 함수 : 20251216 최상림 추가
- * @param {String} text : 경고창 내용
+ * @param {String} text : 경고창 텍스트
  */
 function layerAlert(text) {
     const fadeInTime = 600;
@@ -81,4 +144,3 @@ function layerAlert(text) {
         }, delayTime);
     }
 }
-
