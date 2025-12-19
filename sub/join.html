@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>통합 로그인 - 로그인</title>
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/ydpb.css">
+    <link rel="stylesheet" href="../css/ydpb_member.css">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/prefixfree.min.js"></script>
+    <script src="../js/ydpb.js"></script>
+    <script src="../js/ydpb_member.js"></script>
+</head>
+<body>
+    <div id="wrap" class="member_wrap">
+        <!-- member header -->
+        <header class="member_header">
+            <div class="header_inner">
+                <h1>
+                    <a href="../"><span class="blind">영등포구</span></a><b>통합로그인</b>
+                </h1>
+                <p>영등포구청 홈페이지를 방문해주신 여러분 환영합니다</p>
+            </div>
+        </header>
+        <!-- //member header -->
+
+        <!-- member container -->
+        <div class="member_container">
+            <div class="membership">
+                <div class="member_inner">
+                    <!-- member menu -->
+                    <ul class="member_menu">
+                        <li>
+                            <a href="login.html">통합로그인</a>
+                        </li>
+                        <li class="active">
+                            <span>회원가입</span>
+                        </li>
+                        <li>
+                            <a href="#">약관재동의</a>
+                        </li>
+                    </ul>
+                    <!-- //member menu -->
+
+                    <!-- member contents -->
+                    <div class="member_contents join_contents">
+                        <ol class="join_flow">
+                            <li>
+                                <b>STEP01</b>
+                                <span>회원구분</span>
+                            </li>
+                            <li>
+                                <b>STEP02</b>
+                                <span>약관동의 및 본인인증</span>
+                            </li>
+                            <li class="active">
+                                <b>STEP03</b>
+                                <span>회원정보입력</span>
+                            </li>
+                            <li>
+                                <b>STEP04</b>
+                                <span>가입완료</span>
+                            </li>
+                        </ol>
+                        <form action="#" method="post" class="join_form">
+                            <table class="table_form">
+                                <colgroup>
+                                    <col class="col1">
+                                    <col class="col2">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">
+                                            <label for="id">사용자ID</label>
+                                            <span class="required_mark">필수</span>
+                                        </th>
+                                        <td>
+                                            <input type="text" name="id" id="id" class="input input_auto" maxlength="40" size="40">
+                                            <button type="button" class="btn btn_write btn_sm" onclick="layerAlert('죄송합니다.<br> 현재 준비중인 메뉴입니다.')">중복확인</button>
+                                            <p>※ ID의 첫 자는 소문자 알파벳으로 시작해야 하며 5자리 이상 입력하셔야 합니다.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">사용자 이름</th>
+                                        <td>홍길동</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">사용자 생년월일</th>
+                                        <td>2000.01.01</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">사용자 성별</th>
+                                        <td>남</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <label for="pw">비밀번호</label>
+                                            <span class="required_mark">필수</span>
+                                        </th>
+                                        <td>
+                                            <input type="password" name="pw" id="pw" class="input input_auto" maxlength="40" size="40">
+                                            <p>※ 비밀번호는 숫자와 영문, 특수문자(!@#$%^&*+=-) 조합으로 9~20자리를 사용해야 합니다.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <label for="pwRe">비밀번호확인</label>
+                                            <span class="required_mark">필수</span>
+                                        </th>
+                                        <td>
+                                            <input type="password" name="pwRe" id="pwRe" class="input input_auto" maxlength="40" size="40">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            주소
+                                            <span class="required_mark">필수</span>
+                                        </th>
+                                        <td>
+                                            <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+                                            <button type="button" class="btn btn_cancel btn_sm" onclick="execDaumPostcode()">주소찾기</button>
+                                            <span class="text_alert">우편번호 검색창이 새창으로 열립니다.</span>
+                                            <input type="text" name="address1" id="address1" class="input" maxlength="300" placeholder="주소" readonly>
+                                            <input type="text" name="address2" id="address2" class="input" maxlength="300" placeholder="상세주소">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">일반전화</th>
+                                        <td>
+                                            <input type="text" name="tel1" id="tel1" class="input input_auto" maxlength="3" size="3">-
+                                            <input type="text" name="tel2" id="tel2" class="input input_auto" maxlength="4" size="4">-
+                                            <input type="text" name="tel3" id="tel3" class="input input_auto" maxlength="4" size="4">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            휴대폰
+                                            <span class="required_mark">필수</span>
+                                        </th>
+                                        <td>
+                                            <input type="text" name="mobile1" id="mobile1" class="input input_auto" maxlength="3" size="3" value="010" readonly>-
+                                            <input type="text" name="mobile2" id="mobile2" class="input input_auto" maxlength="4" size="4" value="1234" readonly>-
+                                            <input type="text" name="mobile3" id="mobile3" class="input input_auto" maxlength="4" size="4" value="1234" readonly>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            이메일
+                                            <span class="required_mark">필수</span>
+                                        </th>
+                                        <td>
+                                            <input type="text" name="email1" id="email1" class="input input_auto">
+                                            @
+                                            <input type="text" name="email2" id="email2" class="input input_auto">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">영등포구소식</th>
+                                        <td>
+                                            <div class="radio">
+                                                <input type="radio" name="newsAgree" id="newsAgree_Y" checked>
+                                                <label for="newsAgree_Y">받음</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="newsAgree" id="newsAgree_N">
+                                                <label for="newsAgree_N">받지않음</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="btns">
+                                <input type="submit" class="btn btn_write" value="회원가입">
+                            </div>
+                        </form>
+                    </div>
+                    <!-- //member contents -->
+                </div>
+            </div>
+        </div>
+        <!-- //member container -->
+    </div>
+</body>
+</html>
