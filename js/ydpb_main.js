@@ -11,9 +11,4 @@ $(document).ready(function(){
         $('.m3gu').addClass('show');
     });
 
-    $('.loc_sns').on('click', function() {
-        $(this).toggleClass('checked');
-        $('.sns_list').toggleClass('show');
-    });
-
 });

@@ -100,6 +100,12 @@ function initUi() {
         $(this).next('.sub_group_list').toggleClass('show');
     });
 
+    // 로케이션 공유 버튼 클릭 이벤트 : 20251219 윤성민 추가
+    $('.loc_sns').on('click', function() {
+        $(this).toggleClass('checked');
+        $('.sns_list').toggleClass('show');
+    });
+
     // menuName 변수가 있을 경우 해당 값에 해당하는 사이드메뉴 열기 : 20251218 최상림 추가
     // 사이드메뉴를 jQuery load 메소드로 추가하고, 해당 페이지 메뉴 항목을 열기 위한 코드
     if(typeof menuName != 'undefined' && menuName.trim() != '') {
