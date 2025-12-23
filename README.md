@@ -1,6 +1,17 @@
 # ydpb 프로젝트
 index : <a href="https://superlucky24.github.io/ydpb/" target="_blank">https://superlucky24.github.io/ydpb/</a><br>
 <hr>
+<h3>* 2025.12.23 수정사항 *</h3>
+<p>
+  <b>HTML</b><br>
+  sidemenu_layout.html : 우리동이야기 > 민원신청 메뉴 추가<br>
+  civil_complaint_list.html, civil_complaint_view.html, civil_complaint_write.html : 민원신청 목록, 글보기, 글쓰기 추가
+</p>
+<p>
+  <b>CSS</b><br>
+  ydpb.css : 민원신청 화면 버튼 css 추가
+</p>
+<hr>
 <h3>* 2025.12.18 수정사항 *</h3>
 <p>
   <b>파일 백업</b><br>
