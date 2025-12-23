@@ -90,10 +90,6 @@
                                     </colgroup>
                                     <tbody>
                                         <tr>
-                                            <th scope="row">작성자</th>
-                                            <td>홍길동</td>
-                                        </tr>
-                                        <tr>
                                             <th scope="row">
                                                 <label for="subject">제목</label>
                                                 <span class="required_mark">필수항목</span>
@@ -109,6 +105,19 @@
                                             </th>
                                             <td>
                                                 <textarea name="content" id="content" class="input" rows="10"></textarea>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">공개여부</th>
+                                            <td>
+                                                <div class="radio">
+                                                <input type="radio" name="public" id="public_Y" checked>
+                                                <label for="public_Y">공개</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="public" id="public_N">
+                                                <label for="public_N">비공개</label>
+                                            </div>
                                             </td>
                                         </tr>
                                     </tbody>

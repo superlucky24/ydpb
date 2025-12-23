@@ -87,7 +87,6 @@
                                             <label for="search_cnb" class="skip">검색항목선택</label>
                                             <select name="search_cnb" id="search_cnb" title="검색항목선택" class="p-input">
                                                 <option value="title" selected="selected">제목</option>
-                                                <option value="name">작성자</option>
                                             </select>
                                             
                                             <label for="search_krwd" class="skip"></label>
@@ -121,25 +120,32 @@
                                 <tr>
                                     <th scope="col">번호</th>
                                     <th scope="col">제목</th>
-                                    <th scope="col">작성자</th>
-                                    <th scope="col">작성일</th>
+                                    <th scope="col">신청일</th>
+                                    <th scope="col">공개여부</th>
                                     <th scope="col">처리상황</th>
                                 </tr>
                             </thead>
                             <tbody class="tb_text">
                                 <tr>
                                     <td>15</td>
-                                    <td class="p_sub"><a href="civil_complaint_view.html">2025년 상반기 영등포본동 자치회관 운영결과 보고서</a></td>
-                                    <td>홍길동</td>
+                                    <td class="p_sub"><a href="civil_complaint_view.html">지하철역 미화개선</a></td>
                                     <td><time datetime="2025-07-09">2025.07.09</time></td>
-                                    <td>N</td>
+                                    <td>Y</td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td>14</td>
-                                    <td class="p_sub"><a href="civil_complaint_view.html">2024년 상반기 영등포본동 자치회관 운영결과 보고서</a></td>
-                                    <td>홍길동</td>
-                                    <td><time datetime="2025-07-09">2024.07.09</time></td>
+                                    <td class="p_sub"><a href="civil_complaint_view.html" onclick="alert('권한이 없습니다.'); return false">지하철역 미화개선</a></td>
+                                    <td><time datetime="2025-07-09">2025.07.09</time></td>
+                                    <td>N</td>
+                                    <td>진행중</td>
+                                </tr>
+                                <tr>
+                                    <td>13</td>
+                                    <td class="p_sub"><a href="civil_complaint_view.html">지하철역 미화개선</a></td>
+                                    <td><time datetime="2025-07-09">2025.07.09</time></td>
                                     <td>Y</td>
+                                    <td>완료</td>
                                 </tr>
                             </tbody>
                         </table>
