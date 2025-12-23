@@ -5,12 +5,20 @@ index : <a href="https://superlucky24.github.io/ydpb/" target="_blank">https://s
 <p>
   <b>HTML</b><br>
   sidemenu_layout.html : 우리동이야기 > 민원신청 메뉴 추가<br>
-  civil_complaint_list.html, civil_complaint_view.html, civil_complaint_write.html : 민원신청 목록, 글보기, 글쓰기 추가
+  /sub/civil_complaint_list.html : 민원신청 글목록 화면 추가<br>
+  /sub/civil_complaint_view.html : 민원신청 글보기 화면 추가<br>
+  /sub/civil_complaint_write.html : 민원신청 글쓰기 화면 추가
 </p>
 <p>
   <b>CSS</b><br>
   ydpb.css : 민원신청 화면 버튼 css 추가
 </p>
+<p>
+  <b>Image</b><br>
+  /images/sub/icon_board_delelte.png : 게시판 글삭제 버튼 아이콘 추가<br>
+  /images/sub/icon_board_update.png : 게시판 글수정 버튼 아이콘 추가
+</p>
+
 <hr>
 <h3>* 2025.12.18 수정사항 *</h3>
 <p>
