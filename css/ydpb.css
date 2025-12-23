@@ -920,6 +920,35 @@ main {
     border-color: #d6d6d6;
     background-color: #dbdbdb;
 }
+.btn_bordered {
+    position: relative;
+    padding: 7px 24px;
+    color: #202e70;
+    border-color: #151e48;
+}
+.btn_bordered::after {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 18px;
+    margin: 4px 0 0 4px;
+    vertical-align: top;
+}
+.btn_bordered.update::after {
+    background: url(../images/sub/icon_board_update.png) no-repeat center;
+}
+.btn_bordered.delete::after {
+    background: url(../images/sub/icon_board_delete.png) no-repeat center;
+}
+.btn_bordered:hover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #151e48;
+}
 .btn_sm {
     height: 30px;
     padding: 0 12px 2px;
