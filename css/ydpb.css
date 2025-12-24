@@ -958,6 +958,12 @@ main {
 a.btn_sm {
     padding: 0 12px;
 }
+.form_btns_wrap {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
 
 /* input */
 .input {
