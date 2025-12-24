@@ -203,6 +203,9 @@ a span {
     height: 14px;
     margin: 1px 0 0 10px;
 }
+.p-btn:link {
+    color: #fff;
+}
 /* p-post */
 .p-post {
     border-top: 1px solid #222;
