@@ -1,6 +1,21 @@
 # ydpb 프로젝트
 index : <a href="https://superlucky24.github.io/ydpb/" target="_blank">https://superlucky24.github.io/ydpb/</a><br>
 <hr>
+<h3>* 2025.12.24 수정사항 *</h3>
+<p>
+  <b>HTML</b><br>
+  /sub/civil_complaint_view.html : 버튼 영역 구조 수정<br>
+  /sub/civil_complaint_write.html : 폼 name 값 수정<br>
+  /member/join.html : 폼 name 값 수정<br>
+  /member/login.html : 폼 name 값 수정
+</p>
+<p>
+  <b>CSS</b><br>
+  ydpb.css : 버튼 영역 css 추가
+  ydpb_community_center_view.css : 글쓰기 버튼 css 추가
+</p>
+
+<hr>
 <h3>* 2025.12.23 수정사항 *</h3>
 <p>
   <b>HTML</b><br>
