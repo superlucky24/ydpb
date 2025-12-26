@@ -31,7 +31,7 @@ function execDaumPostcode() {
             }
 
             // 우편번호와 주소 정보를 해당 필드에 넣는다.
-            document.getElementById("address1").value = roadAddr;
+            document.getElementById("memAddress").value = roadAddr;
         }
     }).open();
 }
