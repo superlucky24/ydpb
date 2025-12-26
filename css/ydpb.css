@@ -1011,6 +1011,8 @@ a.btn_sm {
 textarea.input {
     height: 130px;
     padding: 12px;
+    line-height: 1.4;
+    resize: vertical;
 }
 
 /* checkbox, radio */
