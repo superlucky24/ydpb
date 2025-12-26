@@ -1,6 +1,19 @@
 # ydpb 프로젝트
 index : <a href="https://superlucky24.github.io/ydpb/" target="_blank">https://superlucky24.github.io/ydpb/</a><br>
 <hr>
+<h3>* 2025.12.26 수정사항 *</h3>
+<p>
+  <b>HTML</b><br>
+  /sub/civil_complaint_write.html : 폼 name, id 값 수정<br>
+  /member/join.html : 폼 name, id 값 수정<br>
+  /member/login.html : 폼 name, id 값 수정
+</p>
+<p>
+  <b>JS<b><br>
+  /js/ydpb_member.js : 폼 name 값 변경으로 인한 스크립트 수정
+</p>
+
+<hr>
 <h3>* 2025.12.24 수정사항 *</h3>
 <p>
   <b>HTML</b><br>
