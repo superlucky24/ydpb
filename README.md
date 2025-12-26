@@ -9,7 +9,7 @@ index : <a href="https://superlucky24.github.io/ydpb/" target="_blank">https://s
   /member/login.html : 폼 name, id 값 수정
 </p>
 <p>
-  <b>JS<b><br>
+  <b>JS</b><br>
   /js/ydpb_member.js : 폼 name 값 변경으로 인한 스크립트 수정
 </p>
 
