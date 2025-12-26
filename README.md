@@ -7,7 +7,7 @@ index : <a href="https://superlucky24.github.io/ydpb/" target="_blank">https://s
   /sub/civil_complaint_list.html : 검색영역 name, id 값 수정<br>
   /sub/civil_complaint_update.html : 신규<br>
   /sub/civil_complaint_write.html : 폼 name, id 값 수정<br>
-  /sub/civil_complaint_view.html : 버튼 링크 수정
+  /sub/civil_complaint_view.html : 버튼 링크 수정<br>
   /member/join.html : 폼 name, id 값 수정<br>
   /member/login.html : 폼 name, id 값 수정
 </p>
